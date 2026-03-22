@@ -3,8 +3,9 @@ from supabase import create_client, Client
 import time
 
 # --- إعدادات الاتصال الآمن (تُجلب من ملف secrets) ---
-url = st.secrets["https://hrpwivxltpxqxrxyrywl.supabase.co"]
-key = st.secrets["sb_publishable_yWke0XGMVhH0SCuEdqnPpA_6RE2rinr"]
+# السطر الصحيح (نستخدم الاسم البرمجي للمفتاح)
+url = st.secrets["SUPABASE_URL"]
+key = st.secrets["SUPABASE_KEY"]
 supabase: Client = create_client(url, key)
 
 # --- واجهة المستخدم الاحترافية ---
